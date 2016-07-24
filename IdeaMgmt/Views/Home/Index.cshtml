@@ -1,0 +1,38 @@
+﻿
+
+    @{
+        ViewBag.Title = "#Hack4Hire - Axis Bank | Zone Startups";
+    }
+
+    <h1><b>Welcome to Axis Bank #Hack4Hire<span class="glyphicon glyphicon-fire"></span> | Zone Startups</b></h1>
+    <h2>Submit your new idea & get your investment from us. </h2>
+    @if (TempData["notice"] != null)
+    {
+        <p>@TempData["notice"]</p>
+    }
+
+     @*@using (Html.BeginForm("SignUp", "Home", new { email = "email", username = "username",password="password", firstname = "firstname", lastname = "lastname", mobileno = "mobileno" }, FormMethod.Post))
+    {
+        //form goes here
+
+        <label>Email: </label>
+        <input id="email" type="text" name="email" />
+        <br />
+        <label>Username: </label>
+        <input id="username" type="text" name="username" />
+        <br />
+        <label>Password: </label>
+        <input id="password" type="text" name="password" />
+        <br />
+        <label>First Name: </label>
+        <input id="firstname" type="text" name="firstname" />
+        <br />
+        <label>Last Name: </label>
+        <input id="lastname" type="text" name="lastname" />
+        <br />
+        <label>Mobile No: </label>
+        <input id="mobileno" type="text" name="mobileno" />
+
+        <input type="submit" value="Get Signed-Up!!!" />
+    }*@
+   

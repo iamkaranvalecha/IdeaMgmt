@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeaMgmt", "IdeaMgmt\IdeaMgmt.csproj", "{62DFE816-D1F5-40D3-9CEC-922A7830FAA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{30DE674F-33EF-40E3-974F-4D8BC22275D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{29709BCB-60F4-456E-9D46-774D0577B381}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{7F2192CA-CBDB-4F2C-8409-E6A555E0284B}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\IdeaMgmt.json = PublishScripts\Templates\IdeaMgmt.json
+		PublishScripts\Templates\IdeaMgmt.param.dev.json = PublishScripts\Templates\IdeaMgmt.param.dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62DFE816-D1F5-40D3-9CEC-922A7830FAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DFE816-D1F5-40D3-9CEC-922A7830FAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DFE816-D1F5-40D3-9CEC-922A7830FAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DFE816-D1F5-40D3-9CEC-922A7830FAA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29709BCB-60F4-456E-9D46-774D0577B381} = {30DE674F-33EF-40E3-974F-4D8BC22275D7}
+		{7F2192CA-CBDB-4F2C-8409-E6A555E0284B} = {30DE674F-33EF-40E3-974F-4D8BC22275D7}
+	EndGlobalSection
+EndGlobal

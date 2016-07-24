@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    var a = ViewBag.em;
+    var b = ViewBag.un;
+    var fEmail = "";
+    var fUsername = "";
+    var fPassword = "";
+    var ffirstname = "";
+    var flastname = "";
+    var fmobileno = "";
+    if (a != "" && b != "")
+    {
+        fEmail = a;
+        fUsername = b;
+    }
+
+}
+
+<center><h2><span class="glyphicon glyphicon-indent-right"></span> Let's get Signed Up!!!<br/></h2>
+    <h2>Submit your idea & Let our money work for you.</h2>
+    </center>
+@using (Html.BeginForm("SignUp", "Home", new { email = "email", username = "username", password = "password", firstname = "firstname", lastname = "lastname", mobileno = "mobileno" }, FormMethod.Post))
+{
+    <center>
+        <br />
+        <label>Email: </label>
+        <input class="form-control" id="email" type="email" name="email" value="@fEmail" required />
+        <br />
+        <label>Username: </label>
+        <input class="form-control" id="username" type="text" name="username" value="@fUsername" required />
+        <br />
+        <label>Password: </label>
+        <input class="form-control" id="password" type="password" name="password" value="@fPassword" required />
+        <br />
+        <label>First Name: </label>
+        <input class="form-control" id="firstname" type="text" name="firstname" value="@ffirstname" required />
+        <br />
+        <label>Last Name: </label>
+        <input class="form-control" id="lastname" type="text" name="lastname" value="@flastname" required />
+        <br />
+        <label>Mobile No: </label>
+        <input class="form-control" id="mobileno" type="number" name="mobileno" maxlength="10" value="@fmobileno" required />
+        <br/>
+        <input class="form-control" type="submit" value="SignUp" />
+    </center>
+    Html.EndForm();
+}
+

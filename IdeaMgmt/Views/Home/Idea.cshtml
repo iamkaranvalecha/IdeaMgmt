@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Post a idea";
+}
+@using (Html.BeginForm("Idea","Home", new { username="username", date="date", title="title", category="category", description="description", votes="votes", tage="tags", status="status", members="members"},FormMethod.Post))
+{
+    <center><label>Post a Idea</label></center>
+    <br/>
+    <label>Username</label>
+    <input type="text" placeholder="Please input your username" required/>
+    <label>Date:</label>
+    <label>@DateTime.Now.ToShortDateString()</label>
+    <br />
+    <br />
+    <label>Title:</label>
+    <br />
+    <input type="text" placeholder="Give a title to your idea" required/>
+    <br />
+    <br />
+    <label>Choose idea category:</label>
+    <br />
+    <select required>
+        <option value="Financial">Financial</option>
+        <option value="Education">Education</option>
+        <option value="Health">Health</option>
+        <option value="Citizen Services">Citizen Services</option>
+    </select>
+    <br />
+    <br />
+    <label>Description</label>
+    <br />
+    <textarea rows="10" cols="40" required placeholder="Put your idea here..." spellcheck="true" translate="yes"></textarea>
+    <br />
+    <br />
+    <label>Status</label>
+    <label></label>
+    <br />
+    <br />
+    <label>Members</Label>
+    <br />
+    <input type="text" placeholder="Please provide email id of your colleagues" required/>
+    <br />
+    <br />
+    <label>Votes</label>
+    <br />
+    <label></label>
+    <br />
+    <br />
+    <input type="submit" name="submit" />
+}

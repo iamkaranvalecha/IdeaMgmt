@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "IdeaMgmt"
+  },
+  "hostingPlanName": {
+    "value": "ServicePlan7bd53bc6-81ca"
+  },
+  "siteLocation": {
+    "value": "South Central US"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "68572135-b875-4fd0-be0d-2ac3dd6fb775"
+  },
+  "resourceGroup": {
+    "value": "BotResource"
+  }
+}
