@@ -3,7 +3,7 @@
     ViewBag.Title = "Login to Portal";
 }
 
-<center><h1><b><span class="glyphicon glyphicon-user"></span>Login to Portal</b></h1></center>
+<center><h1 class="body-content"><b><span class="glyphicon glyphicon-user"></span> Login to Portal</b></h1></center>
 @using (Html.BeginForm("Login", "Home", new { un = "un", p = "p" }, FormMethod.Post))
 {
     <center>
@@ -17,7 +17,7 @@
             <input class="form-control" id="password" type="password" name="p" required />
             <br />
             <br/>
-            <input class="form-control" type="submit" />
+            <button class="btn btn-primary btn-lg navbar-btn" type="submit" >Login</button>
         </fieldset>
     </center>
 }
