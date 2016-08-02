@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -57,7 +55,7 @@ namespace IdeaMgmt.Controllers
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    TempData["notice"] = "Login Sucessfull!!!";
+                    TempData["name"] = "Login Sucessfull!!!";
                     //Creating Cookie
                     var cookie = new HttpCookie("logincookie");
                     cookie.Value = un;
@@ -67,7 +65,7 @@ namespace IdeaMgmt.Controllers
                 }
                 else
                 {
-                    TempData["notice"] = "Login Failed!!! Please try again.";
+                    TempData["name"] = "Login Failed!!! Please try again.";
                 }
             }
             catch (Exception ex)
@@ -112,7 +110,7 @@ namespace IdeaMgmt.Controllers
                 cmd.ExecuteNonQuery();
                 trans.Commit();
                 conn.Close();
-                TempData["notice"] = "SignUp Sucessfull!!! Have a nice day :)";
+                TempData["name"] = "SignUp Sucessfull!!! Have a nice day :)";
                 return RedirectToAction("Index","Home");
             }
             catch (Exception ex)
@@ -198,7 +196,7 @@ namespace IdeaMgmt.Controllers
             var remcookie = new HttpCookie("logincookie");
             remcookie.Expires = DateTime.Now.AddDays(-1d);
             Response.Cookies.Add(remcookie);
-            TempData["notice"] = "Logout Sucessfull!!! Have a nice day :)";
+            TempData["name"] = "Logout Sucessfull!!!";
             return RedirectToAction("Index");
         }
     }

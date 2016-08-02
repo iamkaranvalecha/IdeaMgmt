@@ -19,10 +19,17 @@
 
 }
 
-    @if (TempData["notice"] != null)
+    @if (TempData["name"] != null)
     {
-        <p>@TempData["notice"]</p>
+        <div class="alert alert-success fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+            <p><strong>@TempData["name"]</strong></p>
+            Happy Coding!!!
+        </div>
+        <p></p>
     }
+
+
 
      @*@using (Html.BeginForm("SignUp", "Home", new { email = "email", username = "username",password="password", firstname = "firstname", lastname = "lastname", mobileno = "mobileno" }, FormMethod.Post))
     {

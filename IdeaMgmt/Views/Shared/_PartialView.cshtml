@@ -1,4 +1,4 @@
-﻿@{
+﻿@*@{
     var fun = "";
     if (Request.Cookies["logincookie"] != null)
     {
@@ -7,18 +7,46 @@
 }
 @if (fun != "")
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li><a>Welcome @fun</a></li>
-        <li>@Html.ActionLink("Add a idea", "Index", "Ideas")</li>
-        <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
-    </ul>
-}
 
+    <button type="button" class="navbar-toggle"
+            data-toggle="collapse" data-target="#example-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a>Welcome @fun</a></li>
+                <li>@Html.ActionLink("Add a idea", "Index", "Ideas")</li>
+                <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+            </ul>
+        </div>
+
+}
 else
 {
-<ul class="nav navbar-nav navbar-right">
-    <li>@Html.ActionLink("Login", "Login", "Home")</li>
-    <li>@Html.ActionLink("SignUp", "Signup", "Home")</li>
-    </ul>
 
-}
+    <button type="button" class="navbar-toggle"
+            data-toggle="collapse" data-target="#example-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                <li>@Html.ActionLink("SignUp", "Signup", "Home")</li>
+            </ul>
+        </div>
+
+}*@
+
+@*<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav"></ul>
+    <ul class="nav navbar-nav navbar-right">
+        @*<li>@Html.ActionLink("Add a idea","Idea","Home")</li>*@
+@*<li>@Html.ActionLink("Login", "Login", "Home")</li>
+        </ul>
+    </div>*@

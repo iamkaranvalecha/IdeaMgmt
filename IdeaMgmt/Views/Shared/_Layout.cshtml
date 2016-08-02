@@ -10,22 +10,43 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("#Hack4hire", "Index", "Home", new { area = "" }, new { @class = "navbar-brand"})
+                    @Html.ActionLink("#Hack4hire", "Index", "Home", new { area = "" }, new { @class="navbar-brand"})
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav"></ul>
-                <ul class="nav navbar-nav navbar-right">
-                        @*<li>@Html.ActionLink("Add a idea","Idea","Home")</li>*@
-                        @*<li>@Html.ActionLink("Login", "Login", "Home")</li>
-                        <li>@Html.ActionLink("Sign Up", "SignUp", "Home")</li>*@
+            @{
+                var fun = "";
+                if (Request.Cookies["logincookie"] != null)
+                {
+                    fun = Request.Cookies["logincookie"].Value;
+                }
+            }
+            @if (fun != "")
+            {
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active navbar-link"><a>Welcome @fun</a></li>
+                        <li>@Html.ActionLink("Add a idea", "Index", "Ideas")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
                     </ul>
-                @Html.Partial("_PartialView")
-            </div>
+                </div>
+
+            }
+            else
+            {
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                        <li>@Html.ActionLink("SignUp", "Signup", "Home")</li>
+                    </ul>
+                </div>
+
+            }
         </div>
     </div>
 
