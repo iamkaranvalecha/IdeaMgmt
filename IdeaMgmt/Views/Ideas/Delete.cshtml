@@ -12,28 +12,28 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.id)
+            @Html.DisplayNameFor(model => model.userid)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.id)
+            @Html.DisplayFor(model => model.userid)
         </dd>
 
         @*<dt>
-            @Html.DisplayNameFor(model => model.firstname)
-        </dt>
+                @Html.DisplayNameFor(model => model.firstname)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.firstname)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.firstname)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.lastname)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.lastname)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.lastname)
-        </dd>*@
+            <dd>
+                @Html.DisplayFor(model => model.lastname)
+            </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.title)
@@ -93,12 +93,17 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        <div class="form-group">
+            <div>
+                <button type="submit" value="Delete" class="btn btn-danger">Delete</button>
+            </div>
         </div>
     }
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
 </div>
